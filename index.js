@@ -11,37 +11,38 @@ async function main() {
   const characters = (await Promise.all(requests)).flat();
   console.log(JSON.stringify(characters, null, 2));
 
+  //write your code here
 
-//write your code here
+  //1. collect all characters that has jutsu
+  /**
+   * for item of arr:
+   * ha cb(item) === true
+   *   akkor item hozzaad eredmeny
+   *
+   * return eredmeny objektum
+   */
+  const withJustu = characters.filter(function (item) {
+    return Array.isArray(item.jutsu);
+  });
 
-//1. collect all characters that has jutsu
-/**
- * for item of arr:
- * ha cb(item) === true
- *   akkor item hozzaad eredmeny
- * 
- * return eredmeny objektum
- */
-const withJustu = characters.filter(function(item) {
-    console.log(item);
-});
-for (let item of characters){
-    if (item === "jutsu"){
-        console.log(item)
-    }
-}
-// 2. find the first character with more than 5 jutsu
-/**
- * for item of arr:
- * ha cb(item) === true
- * return item
- * 
- * return null
- */
+  // 2. find the first character with more than 5 jutsu
+  /**
+   * for item of arr:
+   * ha cb(item) === true
+   * return item
+   *
+   * return null
+   */
+  const boss = withJustu.find(() => true);
 
-const boss = withJustu.find(cb)
+  // 3. create a galery with characters that have jutsu
 
-
+  const images = withJustu.map(function(ch) {
+    return ch.images
+  })
+  .flat()
+  .map(cb)
+  //['https://wiki...'] ---> ['<img src=https://wiki...">']
 
 }
 main();
