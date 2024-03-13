@@ -33,7 +33,9 @@ async function main() {
    *
    * return null
    */
-  const boss = withJustu.find(() => true);
+  const boss = withJustu.find(function(ch) {
+    return ch.jutsu.length > 5;
+  });
 
   // 3. create a galery with characters that have jutsu
 
