@@ -43,7 +43,12 @@ async function main() {
     return ch.images
   })
   .flat()
-  .map(cb)
+  .map(function(image){
+    //format?
+    return "<img src='" + image + "'>";
+  })
+
+  console.log(images);
   //['https://wiki...'] ---> ['<img src=https://wiki...">']
 
 }
