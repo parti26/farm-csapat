@@ -9,7 +9,7 @@ notes and add. projects
 - callbacks? 
 - how to use debugger?
 - how do functions work? do they work on two levels?
-- 
+- statikus html generálás
 
 ## Today's session 2024.03.13.
 - 3 diff exc
