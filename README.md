@@ -10,3 +10,7 @@ notes and add. projects
 - how to use debugger?
 - how do functions work? do they work on two levels?
 - 
+
+## Today's session 2024.03.13.
+- 3 diff exc
+-html + css at the end
